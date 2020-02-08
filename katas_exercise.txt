@@ -1,0 +1,88 @@
+# Excercise: Hello
+print("hello Tshepo!")
+
+# Exercise: check if a number is even
+Even_or_odd = int(input("Enter a number: "))
+mod = Even_or_odd % 2
+if mod > 0:
+    print("Odd.")
+else:
+    print("Even.")
+
+# Exercise: Draw a square
+    #square
+square=int(2)
+for i in range(square):
+    print ('#' *square)
+
+square=int(4)
+for i in range(square):
+    print ('#' *square)
+
+#Exercise: Draw a right handed triangle
+#triangle(2)
+rows = int (2)
+
+for i in range (0, rows):
+    for j in range(0, i + 1):
+        print("#", end='')
+
+    print("\r")
+
+#triangle(4)
+rows = int (4)
+
+for i in range (0, rows):
+    for j in range(0, i + 1):
+        print("#", end='')
+
+    print("\r")
+
+
+#Isoceles(2)
+size = 3
+m = (5 * size) - 1
+for i in range(0, size):
+    for j in range(0, m):
+        print(end=" ")
+    m = m - 1 # decrementing m after each loop
+    for j in range(0, i*2 - 1):
+        # printing full Triangle pyramid using stars
+        print("#", end='')
+    print(" ")
+
+
+#Isoceles(4)
+size = 5
+m = (5 * size) - 1
+for i in range(0, size):
+    for j in range(0, m):
+        print(end=" ")
+    m = m - 1 # decrementing m after each loop
+    for j in range(0, i*2 - 1):
+        # printing full Triangle pyramid using stars
+        print("#", end='')
+    print(" ")
+
+    
+#Exercise: find the longest string
+my_strings = ["sign", "string", "list", "run", "python", "anaconda"]
+longest = max(my_strings, key=len)
+print(longest)
+
+
+#Exercise: combine two lists/arrays
+list1=[1,8,15,9]
+list2=[2,7,6,11]
+    #combine list1 & list2
+combine=list1+list2
+print(combine) 
+
+#Exercise: Frame some text
+def print_in_a_frame(words, borderchar = '*'):
+    size = max(len(word) for word in words)
+    print(borderchar * (size + 4))
+    for word in words:
+        print('{bc} {:<{}} {bc}'.format(word, size, bc = borderchar))
+    print(borderchar * (size + 4))
+print_in_a_frame("Here is the answer".split())
